@@ -1,0 +1,11 @@
+const GET_DATA = "GET_DATA";
+const DEL_DATA = "DEL_DATA";
+const ADD_ONEDATA = "ADD_ONEDATA";
+const CHANGE_DATA = 'CHANGE_DATA'
+
+export {
+  GET_DATA,
+  DEL_DATA,
+  ADD_ONEDATA,
+  CHANGE_DATA
+}

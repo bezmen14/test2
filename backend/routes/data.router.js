@@ -10,11 +10,9 @@ const router = express.Router();
 
 router.route('/')
   .get(getAllData)
-  .post(createLine);
-
-router.route('/:id')
-  .delete(deleteLine)
+  .post(createLine)
   .put(editLine)
+  .delete(deleteLine);
 
 const dataRouterApi = router;
 
