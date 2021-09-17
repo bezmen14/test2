@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getAllData } from '../../redux/actions/dataAC';
 import DataItem from '../DataItem/DataItem';
 import { List } from 'antd';
+import { ListGroup } from 'reactstrap';
 
 function DataList() {
 
@@ -15,7 +16,7 @@ function DataList() {
   }, [])
 
   return (
-    <List>
+    <ListGroup>
       {dataList.map((el) =>
         <DataItem
           key={el._id}
@@ -23,7 +24,7 @@ function DataList() {
           title={el.title}
           content={el.content}
         />)}
-    </List>
+    </ListGroup>
   )
 }
 

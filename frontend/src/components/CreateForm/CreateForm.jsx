@@ -3,12 +3,8 @@ import { useDispatch } from 'react-redux';
 import { addOneData } from '../../redux/actions/dataAC'
 
 function CreateForm() {
-
   const [titleInput, setTitleInput] = useState('')
   const [contentInput, setContentInput] = useState('')
-  console.log(titleInput);
-  console.log(contentInput);
-
 
   const dispatch = useDispatch()
 
@@ -28,15 +24,17 @@ function CreateForm() {
   }
 
   return (
-    <form onSubmit={submitHandler}>
-      <div className="mb-3">
-        <input onChange={titleInputHandler} value={titleInput} type="text" className="form-control" placeholder="title" />
-      </div>
-      <div className="mb-3">
-        <input onChange={contentInputHandler} value={contentInput} type="text" className="form-control" placeholder="content"/>
-      </div>
-      <button type="submit" className="btn btn-primary">Добавить</button>
-    </form>
+    <div className='d-flex justify-content-center'>
+      <form className='w-25' onSubmit={submitHandler}>
+        <div className="mb-3 mt-4">
+          <input onChange={titleInputHandler} value={titleInput} type="text" className="form-control" placeholder="title" />
+        </div>
+        <div className="mb-3">
+          <input onChange={contentInputHandler} value={contentInput} type="text" className="form-control" placeholder="content" />
+        </div>
+        <button type="submit" className="btn btn-primary">Добавить</button>
+      </form>
+    </div>
   )
 }
 
