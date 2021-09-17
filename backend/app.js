@@ -5,7 +5,7 @@ const express = require('express');
 const logger = require('morgan');
 
 const dataRouter = require('./routes/data.router');
-const {PORT} = process.env || 3001;
+const PORT = 3001;
 const app = express();
 dbConnect();
 
@@ -19,4 +19,3 @@ app.use('/api/v1/data', dataRouter);
 app.listen(PORT, () => {
   console.log('Server has been started on PORT', PORT)
 })
-

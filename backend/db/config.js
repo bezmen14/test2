@@ -5,7 +5,7 @@ const options = {
   useUnifiedTopology: true,
 }
 
-const { dbConnectionURL } = process.env
+const dbConnectionURL = 'dbConnectionURL=mongodb+srv://admin:123@cluster0.igyyo.mongodb.net/zdrav_service?retryWrites=true&w=majority'
 
 module.exports = {
   dbConnectionURL,

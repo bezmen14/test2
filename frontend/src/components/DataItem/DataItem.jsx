@@ -1,15 +1,12 @@
-import { List, Button } from 'antd';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { removeData, updateData } from '../../redux/actions/dataAC';
-
 
 function DataItem({ id, key, title, content }) {
   const dispatch = useDispatch()
   const [edit, setEdit] = useState(false);
   const [inputTitle, setInputTitle] = useState(title);
   const [inputContent, setInputContent] = useState(content);
-
 
   const editHandler = async () => {
     dispatch(updateData(id, inputTitle, inputContent))
@@ -42,15 +39,12 @@ function DataItem({ id, key, title, content }) {
           <span>{title}</span>
           <span>{content}</span>
           <div className="d-flex justify-content-end">
-          <button type="button" onClick={() => setEdit(prev => !prev)} className="btn btn-primary ml-3">Изменить</button>
-          <button type="button" onClick={() => deleteHandler(id)} className="btn btn-danger">Удалить</button>&nbsp;
+            <button type="button" onClick={() => setEdit(prev => !prev)} className="btn btn-primary ml-3">Изменить</button>
+            <button type="button" onClick={() => deleteHandler(id)} className="btn btn-danger">Удалить</button>&nbsp;
           </div>
         </li>
       </div>
-
   )
 }
 
-
 export default DataItem;
-

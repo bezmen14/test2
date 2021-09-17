@@ -39,12 +39,10 @@ export const addOneData = (title, content) => async (dispatch) => {
   dispatch(createData(oneData.data))
 }
 
-
 export const updateData = (id, inputOneValue, inputTwoValue) => async (dispatch) => {
   await axios.put('http://127.0.0.1:3001/api/v1/data', { id, inputOneValue, inputTwoValue })
   dispatch(change(id, inputOneValue, inputTwoValue))
 }
-
 
 export const removeData = (id) => async (dispatch) => {
   await axios.delete('http://127.0.0.1:3001/api/v1/data', { data: { id } });

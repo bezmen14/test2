@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// redux
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';

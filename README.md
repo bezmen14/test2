@@ -7,7 +7,7 @@ ___
 ### `npm start`
 ___
 ## Технический стек:
-- Front: React, Bootstrap, Redux/Thunk;
+- Front: React, Bootstrap, Redux/Thunk
 - Back: Express
 - Database: MongoDB
-- Для работы с запросами: axios;
+- Для работы с запросами: axios

@@ -56,7 +56,6 @@ const deleteLine = async (req, res) => {
   }
 };
 
-
 module.exports = {
   getAllData,
   createLine,
